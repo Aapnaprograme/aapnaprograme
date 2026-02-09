@@ -45,7 +45,7 @@ _(More coming soon… 🚧)_
 ---
 
 ### 📫 How to Reach Me
-- 📧 Email: **your-email@gmail.com**
+- 📧 Email: fubbook26gmail.com**
 - 🌐 GitHub: [github.com/aapnaprograme](https://github.com/aapnaprograme)
 
 ---

@@ -1,0 +1,314 @@
+/* Google Fonts - Playfair for Luxury, Poppins for Cleanliness */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    background-color: #fffafa;
+    background-image: linear-gradient(rgba(255, 240, 245, 0.85), rgba(255, 240, 245, 0.85)), 
+                      url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2070');
+    background-attachment: fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* --- Header Section --- */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 5px solid #ffb6c1;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* More feminine look */
+    font-size: 4.5rem;
+    color: #d63384;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+/* --- Navigation Bar --- */
+nav ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #ff69b4;
+    border-bottom: 2px solid #ff69b4;
+}
+
+/* --- Content Sections --- */
+section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(255, 182, 193, 0.2);
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Welcome Image */
+section > img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Product Section (6 Cards Layout) --- */
+/* Important: Add id="products-grid" to your section in HTML */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Desktop pe ek line mein 3 */
+    gap: 30px;
+    padding: 10px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 25px;
+    border: 1px solid #fff0f5;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(214, 51, 132, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.3rem;
+    margin: 15px 0;
+    background: #fff0f5;
+    padding: 5px 15px;
+    border-radius: 50px;
+}
+
+/* --- Stylish Buttons --- */
+button {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(255, 154, 158, 0.3);
+}
+
+button:hover {
+    box-shadow: 0 15px 25px rgba(255, 154, 158, 0.5);
+    transform: scale(1.05);
+}
+
+/* --- Services List --- */
+.services-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+.services-list li {
+    background: #fff0f5;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    color: #d63384;
+    font-weight: 600;
+    border: 1px solid #ffb6c1;
+    transition: 0.3s;
+}
+
+.services-list li:hover {
+    background: #d63384;
+    color: white;
+}
+
+/* --- Gallery Grid --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* --- Contact Form --- */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group { margin-bottom: 20px; }
+
+input, textarea {
+    width: 100%;
+    padding: 18px;
+    border: 2px solid #fff0f5;
+    border-radius: 15px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ffb6c1;
+    background: #fff9fb;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 50px;
+    background: #222;
+    color: white;
+    margin-top: 80px;
+    border-top: 5px solid #d63384;
+}
+
+/* --- Responsive (Mobile Friendly) --- */
+@media (max-width: 992px) {
+    .product-container, .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablets par 2 cards */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-container, .gallery-grid {
+        grid-template-columns: 1fr; /* Mobile par 1 card */
+    }
+    h1 { font-size: 3rem; }
+    section { padding: 20px; }
+}
+
+/* --- Our Services Section --- */
+.services-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 60px 20px;
+    border-radius: 40px;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap; /* Yeh services ko line se wrap karega */
+    justify-content: center;
+    gap: 15px; /* Spans ke beech ki jagah */
+    margin-top: 20px;
+}
+
+.services-list span {
+    background: #fff0f5; /* Light pink background */
+    color: #d63384; /* Deep pink text */
+    padding: 15px 35px;
+    border-radius: 50px; /* Round pill shape */
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #ffb6c1;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
+    display: inline-block;
+}
+
+/* Hover Effect - Jab mouse le jayein */
+.services-list span:hover {
+    background: linear-gradient(45deg, #d63384, #ff69b4);
+    color: white;
+    transform: scale(1.1) rotate(2deg); /* Thoda sa bada aur tilt hoga */
+    box-shadow: 0 8px 20px rgba(214, 51, 132, 0.3);
+    border-color: transparent;
+}
+
+/* Har span se pehle ek chota sa sparkle icon */
+.services-list span::before {
+    content: '✨ ';
+    margin-right: 8px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+    .services-list span {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%; /* Mobile par full width bars ban jayenge */
+        text-align: center;
+    }
+}

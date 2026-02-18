@@ -1,0 +1,933 @@
+/* ==================================================
+   GLOBAL RESET
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    color:white;
+    line-height:1.6;
+    animation:bgAnimation 15s infinite alternate;
+}
+
+/* ==================================================
+   ANIMATED BACKGROUND COLOR
+================================================== */
+
+@keyframes bgAnimation{
+    0%{background:#0f0c29;}
+    20%{background:#1a2a6c;}
+    40%{background:#b21f1f;}
+    60%{background:#ff512f;}
+    80%{background:#dd2476;}
+    100%{background:#3a1c71;}
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#fff;
+    text-shadow:0 0 10px yellow;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.4s;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+nav ul li a:hover{
+    background:linear-gradient(45deg,#ff00cc,#3333ff);
+    box-shadow:0 0 10px cyan;
+}
+
+/* ==================================================
+   HERO SECTION
+================================================== */
+
+#home{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0.7));
+}
+
+.hero-content{
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+
+.hero-content h1{
+    font-size:50px;
+    margin-bottom:20px;
+    background:linear-gradient(45deg,#ff00cc,#00ffff,#ffcc00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-content button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(45deg,#ff512f,#dd2476);
+    color:white;
+    transition:0.4s;
+}
+
+.hero-content button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #fff;
+}
+
+/* ==================================================
+   SECTION COMMON
+================================================== */
+
+section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+section h2{
+    font-size:35px;
+    margin-bottom:40px;
+    background:linear-gradient(45deg,#00ffff,#ff00cc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* ==================================================
+   ANIME CARDS
+================================================== */
+
+.anime-card{
+    padding:30px;
+    margin:20px auto;
+    border-radius:20px;
+    max-width:600px;
+    background:linear-gradient(45deg,#ff512f,#f09819);
+    transition:0.4s;
+}
+
+.anime-card:nth-child(2){
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+}
+
+.anime-card:nth-child(3){
+    background:linear-gradient(45deg,#fc00ff,#00dbde);
+}
+
+.anime-card:nth-child(4){
+    background:linear-gradient(45deg,#f7971e,#ffd200);
+}
+
+.anime-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px white;
+}
+
+/* ==================================================
+   GALLERY
+================================================== */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.img-box{
+    height:250px;
+    overflow:hidden;
+    border-radius:20px;
+    position:relative;
+}
+
+.img-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.img-box:hover img{
+    transform:scale(1.2) rotate(3deg);
+}
+
+.img-box::after{
+    content:"🔥 Anime";
+    position:absolute;
+    bottom:-40px;
+    left:0;
+    width:100%;
+    text-align:center;
+    padding:10px;
+    background:rgba(0,0,0,0.7);
+    transition:0.4s;
+}
+
+.img-box:hover::after{
+    bottom:0;
+}
+
+/* ==================================================
+   CHARACTERS
+================================================== */
+
+.character{
+    display:inline-block;
+    width:250px;
+    margin:15px;
+    padding:20px;
+    border-radius:20px;
+    background:linear-gradient(45deg,#36d1dc,#5b86e5);
+    transition:0.4s;
+}
+
+.character img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.character:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px #fff;
+}
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+button[type="submit"]{
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff00cc,#3333ff);
+    color:white;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button[type="submit"]:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px white;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.8);
+    margin-top:50px;
+    font-size:14px;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero-content h1{
+        font-size:30px;
+    }
+
+}
+
+/* ==================================================
+   TIMELINE SECTION
+================================================== */
+
+#timeline{
+    position:relative;
+    padding:100px 10%;
+}
+
+#timeline h2{
+    margin-bottom:60px;
+}
+
+/* Vertical Line */
+
+#timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:4px;
+    height:100%;
+    background:linear-gradient(to bottom,#ff00cc,#00ffff,#ffcc00);
+    transform:translateX(-50%);
+}
+
+/* Timeline Item */
+
+.timeline-item{
+    width:45%;
+    padding:25px;
+    margin:40px 0;
+    border-radius:20px;
+    position:relative;
+    color:white;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.1);
+    transition:0.4s;
+}
+
+/* Left Side */
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+/* Right Side */
+
+.timeline-item:nth-child(even){
+    left:55%;
+}
+
+/* Circle Dot */
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    top:20px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#ff00cc,#00ffff);
+    box-shadow:0 0 10px white;
+}
+
+/* Dot Position Left */
+
+.timeline-item:nth-child(odd)::before{
+    right:-40px;
+}
+
+/* Dot Position Right */
+
+.timeline-item:nth-child(even)::before{
+    left:-40px;
+}
+
+/* Hover Effect */
+
+.timeline-item:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #fff;
+    background:linear-gradient(45deg,#ff512f,#dd2476);
+}
+
+/* Heading */
+
+.timeline-item h3{
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+/* ==================================================
+   RESPONSIVE TIMELINE
+================================================== */
+
+@media(max-width:768px){
+
+    #timeline::before{
+        left:20px;
+    }
+
+    .timeline-item{
+        width:100%;
+        padding-left:60px;
+        text-align:left !important;
+        left:0 !important;
+    }
+
+    .timeline-item::before{
+        left:20px !important;
+    }
+
+}
+
+/* ==================================================
+   SKILLS SECTION
+================================================== */
+
+#skills{
+    padding:100px 10%;
+}
+
+.skill{
+    margin:30px auto;
+    max-width:600px;
+    text-align:left;
+}
+
+.skill p{
+    font-weight:bold;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+/* Progress Bar Background */
+
+.progress{
+    width:100%;
+    height:15px;
+    background:rgba(255,255,255,0.2);
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Animated Fill */
+
+.progress::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:0%;
+    border-radius:20px;
+    animation:fillBar 3s forwards;
+}
+
+/* Different Colors + Width */
+
+.skill:nth-child(2) .progress::before{
+    background:linear-gradient(45deg,#ff512f,#dd2476);
+    width:90%;
+}
+
+.skill:nth-child(3) .progress::before{
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    width:85%;
+}
+
+.skill:nth-child(4) .progress::before{
+    background:linear-gradient(45deg,#f7971e,#ffd200);
+    width:80%;
+}
+
+.skill:nth-child(5) .progress::before{
+    background:linear-gradient(45deg,#fc00ff,#00dbde);
+    width:75%;
+}
+
+.skill:nth-child(6) .progress::before{
+    background:linear-gradient(45deg,#36d1dc,#5b86e5);
+    width:70%;
+}
+
+/* Animation */
+
+@keyframes fillBar{
+    from{width:0%;}
+}
+
+/* Hover Glow */
+
+.skill:hover .progress::before{
+    box-shadow:0 0 15px white;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+    .skill{
+        max-width:100%;
+    }
+}
+
+/* ==================================================
+   STATS SECTION
+================================================== */
+
+#stats{
+    padding:100px 10%;
+    text-align:center;
+}
+
+/* Stats Container Layout */
+
+#stats{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+/* Stat Box */
+
+.stat-box{
+    width:250px;
+    padding:40px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Gradient Border Animation */
+
+.stat-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:25px;
+    padding:2px;
+    background:linear-gradient(45deg,#ff00cc,#00ffff,#ffcc00,#ff512f);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+}
+
+/* Number Style */
+
+.stat-box h3{
+    font-size:40px;
+    margin-bottom:10px;
+    background:linear-gradient(45deg,#ff00cc,#00ffff,#ffcc00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:numberGlow 2s infinite alternate;
+}
+
+/* Text */
+
+.stat-box p{
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+/* Hover Effect */
+
+.stat-box:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 0 25px white;
+}
+
+/* Glow Animation */
+
+@keyframes numberGlow{
+    from{
+        text-shadow:0 0 5px white;
+    }
+    to{
+        text-shadow:0 0 20px #ff00cc;
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+    #stats{
+        flex-direction:column;
+    }
+}
+
+/* ==================================================
+   TESTIMONIALS SECTION
+================================================== */
+
+#testimonials{
+    padding:100px 10%;
+    text-align:center;
+}
+
+#testimonials h2{
+    margin-bottom:60px;
+}
+
+/* Layout */
+
+#testimonials{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+/* Review Card */
+
+.review{
+    width:300px;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    position:relative;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+/* Gradient Animated Border */
+
+.review::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:25px;
+    padding:2px;
+    background:linear-gradient(45deg,#ff00cc,#00ffff,#ffcc00,#ff512f);
+    background-size:300% 300%;
+    animation:borderMove 6s linear infinite;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+}
+
+/* Border Animation */
+
+@keyframes borderMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Review Text */
+
+.review p{
+    font-size:16px;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+/* Reviewer Name */
+
+.review h4{
+    font-weight:bold;
+    background:linear-gradient(45deg,#ff00cc,#00ffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Hover Effect */
+
+.review:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:0 0 30px white;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+    #testimonials{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+/* ==================================================
+   ABOUT SECTION
+================================================== */
+
+#about{
+    padding:100px 10%;
+    text-align:center;
+    position:relative;
+}
+
+/* Glass Card Style */
+
+#about{
+    max-width:900px;
+    margin:100px auto;
+    padding:50px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    transition:0.5s;
+    overflow:hidden;
+}
+
+/* Animated Gradient Border */
+
+#about::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:30px;
+    padding:3px;
+    background:linear-gradient(45deg,#ff00cc,#00ffff,#ffcc00,#ff512f);
+    background-size:300% 300%;
+    animation:aboutBorder 6s linear infinite;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+}
+
+/* Border Animation */
+
+@keyframes aboutBorder{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Heading */
+
+#about h2{
+    font-size:40px;
+    margin-bottom:30px;
+    background:linear-gradient(45deg,#ff00cc,#00ffff,#ffcc00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Paragraph */
+
+#about p{
+    font-size:18px;
+    margin-bottom:20px;
+    line-height:1.7;
+    letter-spacing:0.5px;
+}
+
+/* Hover Effect */
+
+#about:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 40px white;
+}
+
+/* Floating Animation */
+
+#about{
+    animation:aboutFloat 4s ease-in-out infinite;
+}
+
+@keyframes aboutFloat{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+    #about{
+        padding:30px;
+    }
+
+    #about h2{
+        font-size:28px;
+    }
+}
+
+
+/* =========================================
+   TIMELINE SECTION
+========================================= */
+
+#timeline{
+    padding:100px 10%;
+    position:relative;
+    text-align:center;
+}
+
+/* Heading */
+
+#timeline h2{
+    font-size:40px;
+    margin-bottom:80px;
+    background:linear-gradient(45deg,#ff00cc,#00ffff,#ffcc00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Vertical Line */
+
+#timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:150px;
+    width:4px;
+    height:70%;
+    transform:translateX(-50%);
+    background:linear-gradient(to bottom,#ff00cc,#00ffff,#ffcc00);
+    animation:lineGlow 3s linear infinite;
+}
+
+@keyframes lineGlow{
+    0%{filter:drop-shadow(0 0 5px #ff00cc);}
+    50%{filter:drop-shadow(0 0 20px #00ffff);}
+    100%{filter:drop-shadow(0 0 5px #ffcc00);}
+}
+
+/* Timeline Items */
+
+.timeline-item{
+    width:45%;
+    padding:25px;
+    margin:50px 0;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    position:relative;
+    transition:0.4s;
+    color:white;
+}
+
+/* Left Side */
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+/* Right Side */
+
+.timeline-item:nth-child(even){
+    left:55%;
+    text-align:left;
+}
+
+/* Hover Effect */
+
+.timeline-item:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px white;
+}
+
+/* Circle Dot */
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    top:30px;
+    width:18px;
+    height:18px;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0 0 15px #fff;
+}
+
+/* Dot Position Left */
+
+.timeline-item:nth-child(odd)::before{
+    right:-40px;
+}
+
+/* Dot Position Right */
+
+.timeline-item:nth-child(even)::before{
+    left:-40px;
+}
+
+/* Year Styling */
+
+.timeline-item h3{
+    font-size:28px;
+    margin-bottom:10px;
+    color:#00ffff;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    #timeline::before{
+        left:20px;
+        height:80%;
+    }
+
+    .timeline-item{
+        width:100%;
+        left:0 !important;
+        text-align:left !important;
+        margin-left:40px;
+    }
+
+    .timeline-item::before{
+        left:-30px !important;
+    }
+}

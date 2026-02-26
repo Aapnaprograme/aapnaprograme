@@ -1,0 +1,724 @@
+/* ===== GLOBAL ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f9f9f9;
+}
+
+/* ===== HEADER ===== */
+header{
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+/* ===== LOGO ===== */
+.logo{
+    font-size: 26px;
+    font-weight: 600;
+    color: #4CAF50;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect */
+.nav-links li a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #4CAF50;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover{
+    color: #4CAF50;
+}
+
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+/* ===== MOBILE MENU ===== */
+.menu-toggle{
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px){
+    .nav-links{
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        background: white;
+        flex-direction: column;
+        width: 220px;
+        padding: 25px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .nav-links.active{
+        right: 0;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* ===== HERO CONTENT ===== */
+.hero-content{
+    max-width: 700px;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1{
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display: inline-block;
+    padding: 12px 30px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background: #388E3C;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .hero-content h1{
+        font-size: 36px;
+    }
+
+    .hero-content p{
+        font-size: 15px;
+    }
+}
+
+/* ===== ABOUT SECTION ===== */
+.about{
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* ===== ABOUT IMAGE ===== */
+.about-img{
+    flex: 1;
+}
+
+.about-img img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+}
+
+.about-img img:hover{
+    transform: scale(1.05);
+}
+
+/* ===== ABOUT TEXT ===== */
+.about-text{
+    flex: 1;
+}
+
+.about-text h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p{
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Button already styled in hero */
+/* Agar button same rakhna hai toh extra CSS nahi chahiye */
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px){
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h2{
+        font-size: 30px;
+    }
+}
+
+/* ===== CLASSES SECTION ===== */
+.classes{
+    padding: 100px 8%;
+    background: #f4f9f4;
+    text-align: center;
+}
+
+.section-title{
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+/* ===== CLASS CONTAINER ===== */
+.class-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ===== CLASS CARD ===== */
+.class-card{
+    background: white;
+    padding: 40px 25px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.class-card i{
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.class-card h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.class-card p{
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===== HOVER EFFECT ===== */
+.class-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .section-title{
+        font-size: 30px;
+    }
+
+    .class-card{
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* ===== TRAINERS SECTION ===== */
+.trainers{
+    padding: 100px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.trainer-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ===== TRAINER CARD ===== */
+.trainer-card{
+    background: #f9f9f9;
+    padding: 40px 25px;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.trainer-card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #4CAF50;
+}
+
+.trainer-card h3{
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.trainer-card p{
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== HOVER EFFECT ===== */
+.trainer-card:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    background: #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .trainer-card{
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ===== TESTIMONIAL SECTION ===== */
+.testimonial{
+    padding: 100px 8%;
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+    text-align: center;
+}
+
+/* ===== TESTIMONIAL BOX ===== */
+.testimonial-box{
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.testimonial-box p{
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-box h4{
+    font-size: 16px;
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+/* Hover Effect */
+.testimonial-box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* Optional Quote Icon */
+.testimonial-box::before{
+    content: "❝";
+    font-size: 60px;
+    color: #4CAF50;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    opacity: 0.15;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .testimonial-box{
+        padding: 35px 20px;
+    }
+
+    .testimonial-box p{
+        font-size: 15px;
+    }
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact{
+    padding: 100px 8%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.contact-container{
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* ===== FORM INPUTS ===== */
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact input,
+.contact textarea{
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76,175,80,0.2);
+}
+
+/* ===== BUTTON ===== */
+.contact .btn{
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .contact-container{
+        padding: 35px 20px;
+    }
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background: #222;
+    color: #fff;
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #4CAF50;
+}
+
+.footer-content p{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a{
+    color: #fff;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.social-icons a:hover{
+    background: #4CAF50;
+    transform: translateY(-5px);
+}
+
+/* ===== WHY CHOOSE US ===== */
+.why-us{
+    padding: 100px 8%;
+    background: #f4f9f4;
+    text-align: center;
+}
+
+.why-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.why-box{
+    background: white;
+    padding: 35px 25px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.why-box i{
+    font-size: 35px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.why-box:hover{
+    transform: translateY(-10px);
+}
+
+/* ===== SCHEDULE ===== */
+.schedule{
+    padding: 100px 8%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.schedule-table{
+    overflow-x: auto;
+}
+
+.schedule table{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    border-collapse: collapse;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.schedule th{
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+}
+
+.schedule td{
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule tr:hover{
+    background: #f4f9f4;
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+    padding: 100px 8%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.gallery-container img{
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.gallery-container img:hover{
+    transform: scale(1.05);
+}
+
+/* ===== PRICING ===== */
+.pricing{
+    padding: 100px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.pricing-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.price-card{
+    background: #f4f9f4;
+    padding: 40px 30px;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.price-card h2{
+    font-size: 32px;
+    color: #4CAF50;
+    margin: 20px 0;
+}
+
+.price-card span{
+    font-size: 14px;
+    color: #666;
+}
+
+.price-card:hover{
+    transform: translateY(-10px);
+    background: white;
+}
+
+/* ===== FAQ ===== */
+.faq{
+    padding: 100px 8%;
+    background: #f4f9f4;
+    text-align: center;
+}
+
+.faq-container{
+    max-width: 700px;
+    margin: auto;
+}
+
+.faq-box{
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter{
+    padding: 80px 8%;
+    text-align: center;
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+}
+
+.newsletter form{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter input{
+    padding: 12px 15px;
+    border: none;
+    border-radius: 30px;
+    width: 250px;
+}
+
+.newsletter .btn{
+    background: white;
+    color: #4CAF50;
+}
+
+/* ===== MAP ===== */
+.map{
+    padding: 100px 8%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.map iframe{
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+

@@ -116,42 +116,31 @@ Spreadsheet & data entry practice projects.
 
 ---
 
-# 🌍 Connect With Me
+## 🌍 Connect With Me
 
 <p align="center">
-
-<a href="https://github.com/aapnaprograme" target="_blank">
-  <img src="https://skillicons.dev/icons?i=github" width="50"/>
+  
+<a href="https://github.com/aapnaprograme">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-
-&nbsp;&nbsp;
 
 <a href="mailto:ankushraosahab0332@gmail.com">
-  <img src="https://skillicons.dev/icons?i=gmail" width="50"/>
+<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 
-&nbsp;&nbsp;
-
-<a href="https://www.linkedin.com/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="50"/>
+<a href="https://linkedin.com/">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
-&nbsp;&nbsp;
-
-<a href="https://instagram.com/" target="_blank">
-  <img src="https://skillicons.dev/icons?i=instagram" width="50"/>
+<a href="https://instagram.com/">
+<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
 </a>
 
-&nbsp;&nbsp;
-
-<a href="https://youtube.com/" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="50"/>
+<a href="https://youtube.com/">
+<img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/>
 </a>
 
 </p>
-
----
-
 # 👀 Profile Views
 
 <p align="center">

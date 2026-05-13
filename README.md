@@ -1,90 +1,115 @@
-# Hi 👋, I'm Ankush Rao
+# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"/> Hi, I'm Ankush Rao
 
-<img src="https://readme-typing-svg.herokuapp.com?color=00F7FF&lines=BCA+Student;Frontend+Developer;Learning+Full+Stack+Development;Open+Source+Beginner" />
-
-💻 **Frontend Developer | BCA Student | Tech Learner**
-🚀 Passionate about building modern websites and learning new technologies every day.
-
----
-
-## 🌟 About Me
-
-* 🎓 Pursuing **Bachelor of Computer Applications (BCA)**
-* 🌱 Currently learning **HTML, CSS, JavaScript & Git/GitHub**
-* 💡 Interested in **Frontend Development & Open Source**
-* 📚 Improving my **coding and English communication skills**
-* 🎯 Goal: Become a **Professional Full-Stack Web Developer**
-* ⚡ Love creating projects and experimenting with UI designs
-
----
-
-## 🛠️ Tech Stack
-
-### 💻 Languages
-
-<p>
-<img src="https://skillicons.dev/icons?i=html,css,js" />
-</p>
-
-### 🧰 Tools & Platforms
-
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,vscode" />
+<p align="center">
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=850&lines=Frontend+Developer;BCA+Student;Open+Source+Learner;Building+Modern+Websites;Future+Full+Stack+Developer" />
 </p>
 
 ---
 
-## 🚀 Projects
+## 🚀 About Me
+
+💻 Passionate **Frontend Developer** from India
+🎓 Pursuing **Bachelor of Computer Applications (BCA)**
+🌱 Currently learning **Frontend + Full Stack Development**
+⚡ Love creating modern UI designs and interactive websites
+🧠 Improving coding, problem-solving & communication skills daily
+🎯 Goal: Become a professional **Full Stack Web Developer**
+
+---
+
+## 🛠️ Languages & Technologies
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=html,css,js,c,cpp,python,java,git,github,vscode,mysql" />
+</p>
+
+---
+
+## 🎨 Frontend Skills
+
+✔ Responsive Web Design
+✔ Modern Landing Pages
+✔ Login / Signup UI
+✔ Basic Animations
+✔ Mobile Friendly Layouts
+✔ Clean UI Design
+
+---
+
+## 📂 Featured Projects
 
 ### 🌐 Portfolio Website
 
-Responsive personal portfolio website with modern UI.
+Personal responsive portfolio website with modern design.
 
-### ☕ Coffee Landing Page
+### ☕ Coffee Shop Landing Page
 
-Beautiful coffee shop landing page using HTML & CSS.
+Creative landing page using HTML, CSS & animations.
 
-### 🔐 Login / Signup UI
+### 🔐 Authentication UI
 
-Glassmorphism based authentication UI design.
+Modern Login & Signup card interface.
 
 ### 🚦 Traffic Light Simulation
 
-Traffic light system project using C programming.
+Traffic signal system project using C programming.
 
-📌 *More exciting projects coming soon...*
+### 📊 Excel Practice Projects
+
+Data entry & spreadsheet practice projects.
+
+📌 More projects coming soon...
 
 ---
 
 ## 📈 GitHub Stats
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=aapnaprograme&show_icons=true&theme=tokyonight" height="170"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=aapnaprograme&theme=tokyonight" height="170"/>
+<img src="https://github-readme-stats.vercel.app/api?username=aapnaprograme&show_icons=true&theme=tokyonight&hide_border=true" height="180"/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=aapnaprograme&theme=tokyonight&hide_border=true" height="180"/>
+</p>
+
+---
+
+## 🏆 GitHub Trophy
+
+<p align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=aapnaprograme&theme=tokyonight&no-frame=true&row=1&column=6" />
 </p>
 
 ---
 
 ## 🌍 Connect With Me
 
-* 🌐 GitHub: https://github.com/aapnaprograme
-* 📧 Email: www.ankushraosahab0332@gmail.com
+<p align="center">
+<a href="https://github.com/aapnaprograme">
+<img src="https://skillicons.dev/icons?i=github" width="55"/>
+</a>
+
+<a href="mailto:your-email@gmail.com">
+<img src="https://skillicons.dev/icons?i=gmail" width="55"/>
+</a>
+</p>
 
 ---
 
-## 🤝 Open For
+## 💡 Currently Learning
 
-* Beginner-friendly collaborations
-* Frontend practice projects
-* UI improvements & small bug fixes
-* Learning with other developers
+* Advanced JavaScript
+* React JS
+* Git & GitHub
+* Backend Basics
+* UI/UX Improvements
 
 ---
 
 ## ⚡ Fun Fact
 
-😄 I learn best by building real projects and fixing errors myself!
+> “I learn faster by building real projects and solving errors myself.”
 
-```bash
-git clone https://github.com/aapnaprograme/project-name.git
-```
+---
+
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F7FF,100:6A5ACD&height=120&section=footer"/>
+</p>

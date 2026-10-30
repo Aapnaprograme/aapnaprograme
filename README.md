@@ -149,6 +149,16 @@ Spreadsheet & data entry practice projects.
   />
 </p>
 
+<p align="center">
+  <a href="https://www.buymeacoffee.com/YOUR_USERNAME">
+    <img
+      src="https://img.buymeacoffee.com/button-api/?text=Buy+me+a+coffee&emoji=&slug=YOUR_USERNAME&button_colour=BD5FFF&font_colour=FFFFFF&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
+      height="60"
+      alt="Buy Me a Coffee"
+    />
+  </a>
+</p>
+
 ---
 
 # ⚡ Fun Fact
